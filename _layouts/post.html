@@ -30,6 +30,11 @@ layout: default
                     <h2 class="subheading">{{ page.subtitle }}</h2>
                     {% comment %} endif {% endcomment %}
                     <span class="meta">Posted by {% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %} on {{ page.date | date: "%B %-d, %Y" }}</span>
+                    <!-- id 将作为查询条件 -->
+                    <span id="{{ site.baseurl }}/{{ page.year }}/{{ page.month }}/{{ page.day }}/{{ page.year }}/{{ page.title }}" class="leancloud-visitors" data-flag-title="{{ page.title }}">
+                        <em class="post-meta-item-text">阅读量 </em>
+                        <i class="leancloud-visitors-count">1000000</i>
+                    </span>
                 </div>
             </div>
         </div>
@@ -235,7 +240,7 @@ layout: default
 </script>
 <!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
 <script>
-    async("http://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
         anchors.options = {
           visible: 'always',
           placement: 'right',

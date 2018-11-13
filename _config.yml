@@ -57,6 +57,7 @@ valine_notify: true
 valine_verify: false
 valine_avatar: retro # gravatar style
 valine_placeholder: "来啊，互相伤害啊！"
+valine_visitor: true # 文章访问量统计
 
 # Duoshuo settings
 #duoshuo_username: huxblog

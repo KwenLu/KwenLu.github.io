@@ -204,6 +204,7 @@ layout: default
     var valine_verify = "{{site.valine_verify}}";
     var valine_avatar = "{{site.valine_avatar}}";
     var valine_placeholder = "{{site.valine_placeholder}}";
+    var valine_visitor = "{{site.valine_visitor}}";
     (function() {
         new Valine({
             el: valine_el,
@@ -212,7 +213,8 @@ layout: default
             notify: valine_notify,
             verify: valine_verify,
             avatar: valine_avatar,
-            placeholder: valine_placeholder
+            placeholder: valine_placeholder,
+            visitor: valine_visitor
         });
     })();
 </script>

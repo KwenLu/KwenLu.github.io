@@ -111,6 +111,11 @@ layout: default
                 <!-- disqus 评论框 end -->
                 {% endif %}
 
+                {% if site.valine %}
+                    <!-- Valine评论框 -->
+                <div id="vcomments"></div>
+                {% endif %}
+
             </div>
 
     <!-- Sidebar Container -->
@@ -189,6 +194,30 @@ layout: default
 <!-- disqus 公共JS代码 end -->
 {% endif %}
 
+{% if site.valine %}
+<!-- valine 公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    var valine_el = "#vcomments";
+    var valine_appid = "{{site.valine_appid}}";
+    var valine_appkey = "{{site.valine_appkey}}";
+    var valine_notify = "{{site.valine_notify}}";
+    var valine_verify = "{{site.valine_verify}}";
+    var valine_avatar = "{{site.valine_avatar}}";
+    var valine_placeholder = "{{site.valine_placeholder}}";
+    (function() {
+        new Valine({
+            el: valine_el,
+            appId: valine_appid,
+            appKey: valine_appkey,
+            notify: valine_notify,
+            verify: valine_verify,
+            avatar: valine_avatar,
+            placeholder: valine_placeholder
+        });
+    })();
+</script>
+<!-- valine 公共JS代码 end -->
+{% endif %}
 
 {% if site.anchorjs %}
 <!-- async load function -->

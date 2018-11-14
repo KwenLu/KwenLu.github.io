@@ -30,11 +30,7 @@ layout: default
                     <h2 class="subheading">{{ page.subtitle }}</h2>
                     {% comment %} endif {% endcomment %}
                     <span class="meta">Posted by {% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %} on {{ page.date | date: "%B %-d, %Y" }}</span>
-                    <!-- id 将作为查询条件 -->
-                    <span id="{{ site.baseurl }}/{{ page.year }}/{{ page.month }}/{{ page.day }}/{{ page.year }}/{{ page.title }}" class="leancloud-visitors" data-flag-title="{{ page.title }}">
-                        <em class="post-meta-item-text">阅读量 </em>
-                        <i class="leancloud-visitors-count">1000000</i>
-                    </span>
+
                 </div>
             </div>
         </div>
@@ -209,8 +205,7 @@ layout: default
     var valine_verify = "{{site.valine_verify}}";
     var valine_avatar = "{{site.valine_avatar}}";
     var valine_placeholder = "{{site.valine_placeholder}}";
-    var valine_visitor = "{{site.valine_visitor}}";
-    (function() {
+    (function() {改it
         new Valine({
             el: valine_el,
             appId: valine_appid,
